@@ -35,7 +35,7 @@
   "extra": {
     "react-inspector": {
       "collectors": {
-        "WyriHaximus\\React\\Inspector\\CPUUsage": "src"
+        "WyriHaximus\\React\\Inspector\\MemoryUsage": "src"
       },
       "metrics": [
         "cpu.usage"
