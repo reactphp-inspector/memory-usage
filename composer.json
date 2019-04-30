@@ -1,6 +1,6 @@
 {
   "name": "react-inspector/memory-usage",
-  "description": "Measure the memory usage of the current PHP process",
+  "description": "\uD83D\uDCF6 Measure the memory usage of the current PHP process",
   "license": "MIT",
   "authors": [
     {
