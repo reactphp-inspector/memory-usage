@@ -1,4 +1,4 @@
-# ReactPHP Inspector Metrics stream
+# Measure the memory usage of the current PHP process
 
 [![Linux Build Status](https://travis-ci.org/reactphp-inspector/memory-usage.png)](https://travis-ci.org/reactphp-inspector/memory-usage)
 [![Latest Stable Version](https://poser.pugx.org/react-inspector/memory-usage/v/stable.png)](https://packagist.org/packages/react-inspector/memory-usage)
