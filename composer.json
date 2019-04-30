@@ -1,6 +1,6 @@
 {
-  "name": "wyrihaximus/react-inspector-memory-usage",
-  "description": "Message the memory usage of the current PHP process",
+  "name": "react-inspector/memory-usage",
+  "description": "Measure the memory usage of the current PHP process",
   "license": "MIT",
   "authors": [
     {
@@ -11,19 +11,20 @@
   ],
   "require": {
     "php": "^7.2",
-    "wyrihaximus/react-inspector": "dev-master"
+    "react-inspector/global-state": "dev-master",
+    "react-inspector/metrics": "dev-master"
   },
   "require-dev": {
-    "api-clients/test-utilities": "^5.0"
+    "wyrihaximus/async-test-utilities": "^1.0"
   },
   "autoload": {
     "psr-4": {
-      "WyriHaximus\\React\\Inspector\\MemoryUsage\\": "src/"
+      "ReactInspector\\MemoryUsage\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "WyriHaximus\\React\\Tests\\Inspector\\MemoryUsage\\": "src/"
+      "ReactInspector\\Tests\\MemoryUsage\\": "src/"
     }
   },
   "config": {
@@ -35,14 +36,20 @@
   "extra": {
     "react-inspector": {
       "collectors": {
-        "WyriHaximus\\React\\Inspector\\MemoryUsage": "src"
+        "ReactInspector\\MemoryUsage": "src"
       },
       "metrics": [
-        "cpu.usage"
+        "memory.external",
+        "memory.external_peak",
+        "memory.internal",
+        "memory.internal_peak"
       ],
       "reset": {
         "totals": [
-          "cpu.usage"
+          "memory.external",
+          "memory.external_peak",
+          "memory.internal",
+          "memory.internal_peak"
         ]
       }
     }
