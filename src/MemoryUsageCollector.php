@@ -5,7 +5,9 @@ namespace ReactInspector\MemoryUsage;
 use function ApiClients\Tools\Rx\observableFromArray;
 use React\EventLoop\LoopInterface;
 use ReactInspector\CollectorInterface;
+use ReactInspector\Measurement;
 use ReactInspector\Metric;
+use ReactInspector\Tag;
 use Rx\ObservableInterface;
 
 final class MemoryUsageCollector implements CollectorInterface
@@ -21,10 +23,32 @@ final class MemoryUsageCollector implements CollectorInterface
     public function collect(): ObservableInterface
     {
         return observableFromArray([
-            new Metric('memory.external', \memory_get_usage(true)),
-            new Metric('memory.external_peak', \memory_get_peak_usage(true)),
-            new Metric('memory.internal', \memory_get_usage()),
-            new Metric('memory.internal_peak', \memory_get_peak_usage()),
+            new Metric(
+                'memory',
+                [],
+                [
+                    new Measurement(
+                        \memory_get_usage(true),
+                        new Tag('perspective', 'external'),
+                        new Tag('peak', 'false')
+                    ),
+                    new Measurement(
+                        \memory_get_peak_usage(true),
+                        new Tag('perspective', 'external'),
+                        new Tag('peak', 'true')
+                    ),
+                    new Measurement(
+                        \memory_get_usage(false),
+                        new Tag('perspective', 'internal'),
+                        new Tag('peak', 'false')
+                    ),
+                    new Measurement(
+                        \memory_get_peak_usage(false),
+                        new Tag('perspective', 'internal'),
+                        new Tag('peak', 'true')
+                    ),
+                ]
+            ),
         ]);
     }
 

@@ -3,8 +3,10 @@
 namespace ReactInspector\Tests\MemoryUsage;
 
 use React\EventLoop\LoopInterface;
+use ReactInspector\Measurement;
 use ReactInspector\MemoryUsage\MemoryUsageCollector;
 use ReactInspector\Metric;
+use ReactInspector\Tag;
 use Rx\React\Promise;
 use WyriHaximus\AsyncTestUtilities\AsyncTestCase;
 
@@ -19,16 +21,13 @@ final class MemoryUsageCollectorTest extends AsyncTestCase
 
         /** @var Metric $metric */
         $metrics = $this->await(Promise::fromObservable($collector->collect()->toArray()));
-        self::assertCount(4, $metrics);
+        self::assertCount(1, $metrics);
         $keys = \array_map(function (Metric $metric) {
-            return $metric->getKey();
+            return $metric->name();
         }, $metrics);
         \sort($keys);
         self::assertSame([
-            'memory.external',
-            'memory.external_peak',
-            'memory.internal',
-            'memory.internal_peak',
+            'memory',
         ], $keys);
     }
 }

@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "php": "^7.2",
-    "react-inspector/global-state": "dev-master",
+    "php": "^7.3",
+    "react-inspector/metric": "dev-master",
     "react-inspector/metrics": "dev-master"
   },
   "require-dev": {
@@ -30,7 +30,7 @@
   "config": {
     "sort-packages": true,
     "platform": {
-      "php": "7.2"
+      "php": "7.3"
     }
   },
   "extra": {
