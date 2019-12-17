@@ -24,7 +24,7 @@ final class MemoryUsageCollector implements CollectorInterface
     {
         return observableFromArray([
             new Metric(
-                'memory',
+                'reactphp_memory',
                 [],
                 [
                     new Measurement(

@@ -27,7 +27,7 @@ final class MemoryUsageCollectorTest extends AsyncTestCase
         }, $metrics);
         \sort($keys);
         self::assertSame([
-            'memory',
+            'reactphp_memory',
         ], $keys);
     }
 }
