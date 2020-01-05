@@ -8,7 +8,7 @@ use ReactInspector\CollectorInterface;
 use ReactInspector\Measurement;
 use ReactInspector\Metric;
 use ReactInspector\Tag;
-use Rx\ObservableInterface;
+use Rx\Observable;
 
 final class MemoryUsageCollector implements CollectorInterface
 {
@@ -20,7 +20,7 @@ final class MemoryUsageCollector implements CollectorInterface
         // void
     }
 
-    public function collect(): ObservableInterface
+    public function collect(): Observable
     {
         return observableFromArray([
             new Metric(
