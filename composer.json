@@ -37,20 +37,6 @@
     "react-inspector": {
       "collectors": {
         "ReactInspector\\MemoryUsage": "src"
-      },
-      "metrics": [
-        "memory.external",
-        "memory.external_peak",
-        "memory.internal",
-        "memory.internal_peak"
-      ],
-      "reset": {
-        "totals": [
-          "memory.external",
-          "memory.external_peak",
-          "memory.internal",
-          "memory.internal_peak"
-        ]
       }
     }
   },
