@@ -56,12 +56,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp-inspector/metric.git",
-                "reference": "d6d34ed5ed8e8e6fd5b9a57da88674b01e7cfe12"
+                "reference": "3d06d1dd46ea2c3dccea29bb4ac4ef6946d39b3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp-inspector/metric/zipball/d6d34ed5ed8e8e6fd5b9a57da88674b01e7cfe12",
-                "reference": "d6d34ed5ed8e8e6fd5b9a57da88674b01e7cfe12",
+                "url": "https://api.github.com/repos/reactphp-inspector/metric/zipball/3d06d1dd46ea2c3dccea29bb4ac4ef6946d39b3f",
+                "reference": "3d06d1dd46ea2c3dccea29bb4ac4ef6946d39b3f",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 }
             ],
             "description": "📐 Metric VO's",
-            "time": "2019-12-12T20:59:01+00:00"
+            "time": "2020-01-06T19:05:12+00:00"
         },
         {
             "name": "react-inspector/metrics",

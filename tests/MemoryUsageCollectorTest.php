@@ -20,11 +20,11 @@ final class MemoryUsageCollectorTest extends AsyncTestCase
         $metrics = $this->await(Promise::fromObservable($collector->collect()->toArray()));
         self::assertCount(1, $metrics);
         $keys = \array_map(function (Metric $metric) {
-            return $metric->name();
+            return $metric->config()->name();
         }, $metrics);
         \sort($keys);
         self::assertSame([
-            'memory',
+            'reactphp_memory',
         ], $keys);
     }
 }

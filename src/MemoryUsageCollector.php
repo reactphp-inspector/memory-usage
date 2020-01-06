@@ -4,6 +4,7 @@ namespace ReactInspector\MemoryUsage;
 
 use function ApiClients\Tools\Rx\observableFromArray;
 use ReactInspector\CollectorInterface;
+use ReactInspector\Config;
 use ReactInspector\Measurement;
 use ReactInspector\Metric;
 use ReactInspector\Tag;
@@ -15,7 +16,11 @@ final class MemoryUsageCollector implements CollectorInterface
     {
         return observableFromArray([
             new Metric(
-                'memory',
+                new Config(
+                    'reactphp_memory',
+                    'gauge',
+                    ''
+                ),
                 [],
                 [
                     new Measurement(
