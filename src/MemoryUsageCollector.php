@@ -3,28 +3,24 @@
 namespace ReactInspector\MemoryUsage;
 
 use function ApiClients\Tools\Rx\observableFromArray;
-use React\EventLoop\LoopInterface;
 use ReactInspector\CollectorInterface;
+use ReactInspector\Config;
 use ReactInspector\Measurement;
 use ReactInspector\Metric;
 use ReactInspector\Tag;
-use Rx\ObservableInterface;
+use Rx\Observable;
 
 final class MemoryUsageCollector implements CollectorInterface
 {
-    /**
-     * @param LoopInterface $loop
-     */
-    public function __construct(LoopInterface $loop)
-    {
-        // void
-    }
-
-    public function collect(): ObservableInterface
+    public function collect(): Observable
     {
         return observableFromArray([
             new Metric(
-                'reactphp_memory',
+                new Config(
+                    'reactphp_memory',
+                    'gauge',
+                    ''
+                ),
                 [],
                 [
                     new Measurement(
