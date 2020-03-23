@@ -1,0 +1,24 @@
+{
+    "timeout": 120,
+    "source": {
+        "directories": [
+            "src"
+        ]
+    },
+    "logs": {
+        "text": "infection-log.txt"
+    },
+    "mutators": {
+        "@default": true,
+        "FunctionCallRemoval": {
+            "ignore": [
+                "ReactInspector\\Metrics::_subscribe"
+            ]
+        },
+        "MethodCallRemoval": {
+            "ignore": [
+                "ReactInspector\\Metrics::removeObserver"
+            ]
+        }
+    }
+}
