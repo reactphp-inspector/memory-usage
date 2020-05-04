@@ -454,16 +454,16 @@
         },
         {
             "name": "wyrihaximus/constants",
-            "version": "1.4.3",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-constants.git",
-                "reference": "1205928c3f4bfe811b238a3503c08c94ad4af4e4"
+                "reference": "a2202b683261f8119f3772eb1e3469a2b5c4d9eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-constants/zipball/1205928c3f4bfe811b238a3503c08c94ad4af4e4",
-                "reference": "1205928c3f4bfe811b238a3503c08c94ad4af4e4",
+                "url": "https://api.github.com/repos/WyriHaximus/php-constants/zipball/a2202b683261f8119f3772eb1e3469a2b5c4d9eb",
+                "reference": "a2202b683261f8119f3772eb1e3469a2b5c4d9eb",
                 "shasum": ""
             },
             "require": {
@@ -490,7 +490,7 @@
                 }
             ],
             "description": "Collection of constants for PHP",
-            "time": "2020-02-16T17:58:25+00:00"
+            "time": "2020-04-02T21:00:04+00:00"
         },
         {
             "name": "wyrihaximus/ticking-promise",
