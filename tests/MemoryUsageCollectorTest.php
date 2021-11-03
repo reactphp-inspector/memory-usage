@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace ReactInspector\Tests\MemoryUsage;
 
@@ -6,6 +8,7 @@ use ReactInspector\MemoryUsage\MemoryUsageCollector;
 use ReactInspector\Metric;
 use Rx\React\Promise;
 use WyriHaximus\AsyncTestUtilities\AsyncTestCase;
+
 use function array_map;
 use function Safe\sort;
 
