@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^7.4 || ^8.0",
     "react-inspector/metric": "^1.0",
     "react-inspector/metrics": "^1.0",
     "reactivex/rxphp": "^2.0",
@@ -18,11 +18,11 @@
     "wyrihaximus/constants": "^1.4"
   },
   "require-dev": {
-    "wyrihaximus/async-test-utilities": "^2.0"
+    "wyrihaximus/async-test-utilities": "^4.0.6"
   },
   "config": {
     "platform": {
-      "php": "7.4"
+      "php": "7.4.7"
     },
     "sort-packages": true
   },
