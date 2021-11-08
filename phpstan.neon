@@ -1,7 +1,0 @@
-parameters:
-	ergebnis:
-		classesAllowedToBeExtended:
-			- InvalidArgumentException
-
-includes:
-	- vendor/wyrihaximus/async-test-utilities/rules.neon
