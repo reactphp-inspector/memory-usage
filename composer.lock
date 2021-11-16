@@ -120,28 +120,30 @@
         },
         {
             "name": "react-inspector/metrics",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp-inspector/metrics.git",
-                "reference": "7b9a4ebd96b81b5b6d8df53385dc145438309e85"
+                "reference": "0fb04a99f1c7c548c67ab2b3e63e857105265a04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp-inspector/metrics/zipball/7b9a4ebd96b81b5b6d8df53385dc145438309e85",
-                "reference": "7b9a4ebd96b81b5b6d8df53385dc145438309e85",
+                "url": "https://api.github.com/repos/reactphp-inspector/metrics/zipball/0fb04a99f1c7c548c67ab2b3e63e857105265a04",
+                "reference": "0fb04a99f1c7c548c67ab2b3e63e857105265a04",
                 "shasum": ""
             },
             "require": {
                 "api-clients/rx": "^2.2",
-                "php": "^7.4",
+                "php": "^7.4 || ^8.0",
                 "react-inspector/metric": "^1.0",
-                "react/event-loop": "^1.1",
+                "react/event-loop": "^1.2",
                 "reactivex/rxphp": "^2.0",
                 "thecodingmachine/safe": "^1.0"
             },
             "require-dev": {
-                "wyrihaximus/async-test-utilities": "^2.0"
+                "squizlabs/php_codesniffer": "^3.6.1",
+                "wyrihaximus/async-test-utilities": "^4.0.7",
+                "wyrihaximus/ticking-promise": "^3.0"
             },
             "suggest": {
                 "react-inspector/bunny": "Measure what is going through fread/fwrite calls from bunny/bunny",
@@ -187,7 +189,7 @@
             "description": "☄ Metrics stream",
             "support": {
                 "issues": "https://github.com/reactphp-inspector/metrics/issues",
-                "source": "https://github.com/reactphp-inspector/metrics/tree/1.0.2"
+                "source": "https://github.com/reactphp-inspector/metrics/tree/1.1.0"
             },
             "funding": [
                 {
@@ -195,7 +197,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-15T11:54:04+00:00"
+            "time": "2021-11-08T22:49:11+00:00"
         },
         {
             "name": "react/event-loop",
