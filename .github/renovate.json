@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":widenPeerDependencies", ":rebaseStalePrs", ":prHourlyLimitNone", ":prConcurrentLimitNone", "group:phpstan"],
+  "labels": [ "Dependencies 📦", "PHP 🐘"],
+  "recreateClosed": true,
+  "composerIgnorePlatformReqs": null,
+  "allowScripts": true,
+  "allowPlugins": true,
+  "rangeStrategy": "update-lockfile",
+  "enabledManagers": [
+    "composer"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["composer"],
+      "matchDepTypes": ["require-dev"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchManagers": ["composer"],
+      "matchDepTypes": ["require"],
+      "rangeStrategy": "widen"
+    }
+  ]
+}
