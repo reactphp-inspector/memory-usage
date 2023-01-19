@@ -14,7 +14,7 @@
     "react-inspector/metric": "^1.0",
     "react-inspector/metrics": "^1.0",
     "reactivex/rxphp": "^2.0",
-    "thecodingmachine/safe": "^1.0",
+    "thecodingmachine/safe": "^1.0 || ^2.0",
     "wyrihaximus/constants": "^1.4"
   },
   "require-dev": {
