@@ -1,7 +1,2 @@
-parameters:
-	ergebnis:
-		classesAllowedToBeExtended:
-			- Rx\Subject\Subject
-
 includes:
 	- ../../vendor/wyrihaximus/async-test-utilities/rules.neon
