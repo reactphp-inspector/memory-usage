@@ -1,37 +1,22 @@
 {
-  "name": "react-inspector/memory-usage",
-  "description": "\ud83d\udcf6 Measure the memory usage of the current PHP process",
+  "name": "react-inspector/event-loop",
+  "description": "\ud83c\udf00 Measure the Event Loop",
   "license": "MIT",
   "authors": [
     {
       "name": "Cees-Jan Kiewiet",
       "email": "ceesjank@gmail.com",
-      "homepage": "https://www.wyrihaximus.net/"
+      "homepage": "http://wyrihaximus.net/"
     }
   ],
   "require": {
-    "php": "^7.4 || ^8.0",
-    "react-inspector/metric": "^1.0",
-    "react-inspector/metrics": "^1.0",
-    "reactivex/rxphp": "^2.0",
-    "thecodingmachine/safe": "^1.0",
-    "wyrihaximus/constants": "^1.4"
+    "php": "^8.2",
+    "react/event-loop": "^1.5",
+    "wyrihaximus/metrics": "^2.1"
   },
   "require-dev": {
-    "wyrihaximus/async-test-utilities": "^4.0.7"
-  },
-  "config": {
-    "platform": {
-      "php": "7.4.7"
-    },
-    "sort-packages": true
-  },
-  "extra": {
-    "react-inspector": {
-      "collectors": {
-        "ReactInspector\\MemoryUsage": "src"
-      }
-    }
+    "react/promise-timer": "^1.11",
+    "wyrihaximus/async-test-utilities": "^8"
   },
   "autoload": {
     "psr-4": {
@@ -43,12 +28,27 @@
       "ReactInspector\\Tests\\MemoryUsage\\": "tests/"
     }
   },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true,
+      "icanhazstring/composer-unused": true,
+      "infection/extension-installer": true,
+      "ocramius/package-versions": true
+    },
+    "platform": {
+      "php": "8.2.13"
+    },
+    "sort-packages": true
+  },
   "scripts": {
     "post-install-cmd": [
-      "composer normalize"
+      "composer normalize",
+      "composer update --lock --no-scripts"
     ],
     "post-update-cmd": [
-      "composer normalize"
+      "composer normalize",
+      "composer update --lock --no-scripts"
     ]
   }
 }
